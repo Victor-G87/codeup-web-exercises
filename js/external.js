@@ -30,10 +30,16 @@ alert('Great, ' + favoriteColor + ' is my favorite color too!!');
     var totalPay = (googleHours * gPay) + (amazonHours * aPay) + (faceBookHours * fPay);
     alert("My total pay is $" + totalPay)
 
+    var classIsFull = confirm('Is the class you are trying to join full?');
+    var hasConflicts = confirm('Do you have a class at 2:30 already?');
+    alert('You can join the class is a ' + (!classIsFull && hasConflicts) + ' statement.')
 
 
-
-
+    var hasMoreThanTwoItems = confirm('Do you have more than two items in your cart');
+    var isOfferValid = confirm('Is the offter still valid?');
+    var premiumMember = confirm('Are you a premium  member?');
+    var canUserUseOffer = (hasMoreThanTwoItems || premiumMember) && isOfferValid;
+    alert('You can use this offer is a ' + canUserUseOffer + 'statement.');
 
 
 
