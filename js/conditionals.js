@@ -36,6 +36,23 @@ console.log(analyzeColor('red'));
 console.log(analyzeColor('blue'));
 console.log(analyzeColor('cyan'));
 
+//Class examples. note: type in all if statements first then returns after...
+
+// function analyzeColor(color){
+//     if (color === 'blue'){
+//         return "sky is blue";
+//     } else if (color === 'red'){
+//         return "cherry is red";
+//     }else if (color === 'orange'){
+//         return  "oranges are orange";
+//     }else{
+//         return "i dont know anything about "+ color;
+//     }
+// }
+// // function saved to a variable
+// var returnOfFunction = analyzeColor("blue");
+// console.log(returnOfFunction);
+
 
 
 
@@ -51,7 +68,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//Notes to pass is to use variable inside functions "()"
 console.log(analyzeColor(randomColor));
 /**
  * TODO:
@@ -73,48 +90,49 @@ switch(test) {
         break;
 }
 
+//Class Example
+function  analyzeColor(color){
+    switch (color){
+        case 'blue':
+            return "  sky is blue"
+        case 'red':
+            return "ruby is red"
+        default:
+            return "i dont know anything about "+ color;
+    }
+}
+
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// function analyzeColor(color) {
-//     analyzeColor(prompt("Enter favorite color:"));
-//     // return alert ( color);
-// }
-// analyzeColor(color);
+var favorite =   analyzeColor(prompt("Enter favorite color:"));
+function analyzeColor(favorite) {
 
+    return  ( favorite);
+}
+console.log(analyzeColor(favorite));
+alert("Your favorite color is "+ favorite)
 
 
 
 // var fav =prompt('What is your favorite color?', );
-// function analyzeColor(color){
-//     if (prompt){
-//         return alert(` ${fav} is your favorite!`)
-//     }
 //
-// }
-// analyzeColor(color)
-
-var userInput = prompt('What is your favorite color?');
-console.log('The user entered: ' + userInput);
-alert("your favorite color is " + userInput);
-
-analyzeColor(userInput)
-
-
-
-
-
-
+// function analyzeColor(fav){
+//     return  ( fav);
 //
-// var fav =prompt('What is your favorite color?', );
-//
-// function analyzeColor(color){
 // }
 // alert(` ${fav} is your favorite!`);{
 // }
+
+//Class example
+
+var userColor = prompt("give me a color");
+alert(analyzeColor(userColor));
+
 
 
 /* ########################################################################## */
@@ -163,7 +181,31 @@ function calculateTotal(luckyNumber, totalAmount){
 console.log(calculateTotal(3,100));
 
 
+//Class example, switch version
 
+// function calculateTotal(luckyNumber,totalAmount){
+//     switch(luckyNumber){
+//         case 0:
+//             return; totalAmount;
+//         case 1:
+//             var discount =(totalAmount *.1);
+//             return; totalAmount - discount;
+//         case 2:
+//             var discount =(totalAmount *.25)
+//             return; totalAmount - discount;
+//         case 3:
+//             return;
+//         case 4:
+//             return;
+//         case 5:
+//             return; 0;
+//
+//
+//     }
+//
+// }
+//
+// console.log(calculateTotal(luckyNumber,totalAmount));
 
 
 
@@ -185,40 +227,34 @@ var totalBill =prompt('How much was your bill?' );
 alert("Your lucky number is..."+luckyNumber + " !");
 
 
+
+
 if (luckyNumber === 0){
     alert ("Your total is $"+ totalBill+ ", You saved 0$");
 } else if (luckyNumber === 1){
-    alert ("Your total is $" + totalBill + " You saved $"+ (totalBill * 0.9 - totalBill ));
+    alert ("Your total before discount is $" + (totalBill * 1.1) + " Your New Total is $"+ (totalBill * 0.9 ) );
 } else if (luckyNumber === 2){
-    alert ("Your total is $" + totalBill + " You saved $"+ (totalBill * 0.75 - totalBill ));
+    alert ("Your total before discount is $" + (totalBill * 1.25) + " Your New Total is $"+ (totalBill * 0.75 ) );
 } else if (luckyNumber === 3){
-    alert ("Your total is $" + totalBill + " You saved $"+ (totalBill * 0.65 - totalBill ));
+    alert ("Your total before discount is $" + (totalBill * 1.35) + " Your New Total is $"+ (totalBill * 0.65 ) );
 } else if (luckyNumber === 4){
-    alert ("Your total is $" + totalBill + " You saved $"+ (totalBill * 0.5 - totalBill ));
+    alert ("Your total before discount is $" + (totalBill * 1.50) + " Your New Total is $"+ (totalBill * 0.5 ) );
 } else if (luckyNumber === 5){
     alert ("You saved 100%!!!");
 } else {
 
 }
+// class demo
 
+var luckyNumber = Math.floor(Math.random() * 6);
 
+var usersTotalBill = Number(prompt('what was your totalbill?'));
 
+var discountedBill = calculateTotal(luckyNumber,usersTotalBill)
 
-// if (luckyNumber === 0){
-//     alert ("Your total is "+ totalAmount+ ", You saved 0$");
-// } else if (luckyNumber === 1){
-//     alert (totalAmount * 0.1);
-// } else if (luckyNumber === 2){
-//     alert (totalAmount * 0.25);
-// } else if (luckyNumber === 3){
-//     alert (totalAmount * 0.35);
-// } else if (luckyNumber === 4){
-//     alert (totalAmount * 0.5);
-// } else if (luckyNumber === 5){
-//     alert (totalAmount - totalAmount);
-// } else {
-//
-// }
+alert('your lucky number was '+ luckyNumber);
+alert('your price before the discount was'+ usersTotalBill)+ 'however with the discount you only have to pay '+ discountedBill + '.');
+
 
 /**
  * TODO:
@@ -236,3 +272,71 @@ if (luckyNumber === 0){
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
+
+
+
+confirm("Would you like to enter a number?")
+var userNumber = prompt("please enter a number")
+function userInputInfo(num){
+    if (userNumber % 2 !== 0) {
+        alert("number entered is even");
+    } else (userNumber % 2 === 0);
+    alert("number entered is odd");
+
+}
+
+userInputInfo(num)
+
+
+
+//class example
+
+var userConfirmed = confirm("would you like to enter a number?");
+if (userConfirmed){
+    //The user wants to play
+    var usersNumber = Number(prompt("give me a number"));
+
+    if ((typeof usersNumber))=== "number"{
+
+    }
+
+    if (userNumber % 2 === 0){
+        alert("number is even")
+    }else{
+        (alert('your number is odd.');
+    }
+
+    alert("number plus 100 is "+ (100 + userNumber));
+
+    var numberPosOrNeg = (usersNumber > 0) ? "positive" : "Negative";
+
+    alert ('Your number is' + numberPosOrNeg +".")
+
+}else{
+    alert('hey that is not a number!')
+    //the user does not want to play
+}
+
+
+
+
+
+
+
+
+
+///class example
+
+// var userWantsToContinue = confirm("would you like to continue");
+//
+// if (userWantsToContinue){
+//     var usersDay = prompt(' how is your dat going');
+//     if ( usersDay ==="good"){
+//         console.log("good im glad youre having a good day")
+//     } else {
+//         console.log("im sorry your having a bad day")
+//     }
+// }
