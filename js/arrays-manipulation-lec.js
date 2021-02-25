@@ -169,9 +169,11 @@ pies.reverse();
 
 // splitting string into and array
 
-// var names = "Bob Sally Mary";
+var names = "Bob Sally Mary";
 //
 // var namesArr = names.split(" ");
+//
+// console.log(namesArr);
 //
 // var namesString = namesArr.join("");
 //
@@ -179,12 +181,15 @@ pies.reverse();
 
 // splitting on an empty string
 
-    // var everyCharacter = bondsString.split("");
+    // var everyCharacter = names.split("");
+    // console.log(everyCharacter);
+    // console.log(everyCharacter.reverse().join(""));;
 
 // joining array into a string
 
     // var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
-    // var bondsString = bondsArray.join("_");
+    // var bondsString = bondsArray.join("~_~");
+    // console.log(bondsString);
 
 
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
@@ -199,17 +204,26 @@ pies.reverse();
        5125553030
 */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+    var output = [];
+    // fill output up with phones numbers.
+    var phoneNumbersArray = phoneNums.split("\n");
+
+    phoneNumbersArray.forEach(function (phoneNum){
+       var phoneNumberArray = phoneNum.split("-");
+       console.log(phoneNumberArray.join(""));
+    });
+
+    return output;
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
+for (var i = 0; i < cleanNumsArr.length; i += 1) {
+    console.log(cleanNumsArr[i]);
+}
 
 
 
