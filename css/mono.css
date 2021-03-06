@@ -1,4 +1,4 @@
-*{
+*,table{
     margin: 0;
     padding: 0;
     cursor: crosshair;
@@ -19,6 +19,7 @@ h1 {
     float:right;
     margin-top: 30px;
     margin-left: 15px;
+    background-color: transparent;
 
 }
 #logo {
@@ -43,7 +44,7 @@ body {
     line-height: 30px;
     height: 100vh;
 }
-.slide-in-blurred-top ,.container  {
+.slide-in-blurred-top ,.container {
     -webkit-animation: slide-in-blurred-top 2.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     animation: slide-in-blurred-top 2.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
