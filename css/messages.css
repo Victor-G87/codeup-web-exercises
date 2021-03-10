@@ -1,0 +1,76 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+    font-size: 0.8em;
+}
+
+
+.info1>p{
+    color: #1a253b;
+    width: calc(100% - 2px);
+    border-style:solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-top:4px;
+    padding-bottom: 4px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    background-image: linear-gradient(270deg, #c7d7f6, #0057ff, #c7d7f6);
+    background-size: 600% 100%;
+    text-indent: 10px;
+}
+.info2>p{
+    color: #274331;
+    width: calc(100% - 2px);
+    border-style:solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-top:4px;
+    padding-bottom: 4px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    background-image: linear-gradient(270deg, #c8ebd4, #00ff5b, #c8ebd4);
+    background-size: 600% 100%;
+    text-indent: 10px;
+}
+.info3>p{
+    color: #35351c;
+    width: calc(100% - 2px);
+    border-style:solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-top:4px;
+    padding-bottom: 4px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    background-image: linear-gradient(270deg, #f4f3c4, #f3ff00, #f4f3c4);
+    background-size: 600% 100%;
+    text-indent: 10px;
+}
+.info4>p{
+    color: #451014;
+    width: calc(100% - 2px);
+    border-style:solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-top:4px;
+    padding-bottom: 4px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    background-image: linear-gradient(270deg, #f1cdd0, #ff0004, #f1cdd0);
+    background-size: 600% 100%;
+    text-indent: 10px;
+}
+
+/*!...................ANIMATION...........................!*/
+
+.bg-pan-left ,p{-webkit-animation:bg-pan-left 8s infinite alternate-reverse both;animation:bg-pan-left 8s infinite alternate-reverse both}
+
+    @-webkit-keyframes bg-pan-left{0%{background-position:100% 50%}100%{background-position:0 50%}}@keyframes bg-pan-left{0%{background-position:100% 50%}100%{background-position:0 50%}}
