@@ -1,3 +1,5 @@
+
+
 :root {
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
@@ -7,6 +9,8 @@
 }
 * {
     box-sizing: border-box;
+
+
 }
 body, html {
     background-color: var(--main-bg);
@@ -31,7 +35,7 @@ a {
     position: fixed;
     z-index: 1;
 }
-.nav,li {
+.nav > * {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -51,15 +55,25 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+
 }
 
 .profile-form,.btn-large{
-    position: center;
+    position: relative;
 }
 
 .profile-image{
     position: absolute;
     top: 250px;
+
+}
+.profile-details > *{
+    list-style-type: none;
+
+}
+.profile-items{
+    padding: 0px;
+    line-height: 25px;
 
 }
 
@@ -74,6 +88,8 @@ a {
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    position: relative;
+    top:16px;
 }
 .img-circle {
     border-radius: 100%;
@@ -90,12 +106,57 @@ a {
     margin: 2em;
 }
 
-.media{
-    width: 100%;
-    background-color:#fff ;
-    float:right
+
+
+ .container > * {
+    /*display: block;*/
+    /* float: left;*/
+    /*right: 0px;*/
+    /*width: 25%;*/
+    /* height: 1000px;*/
+    /* margin-top: 10px;*/
+
 }
 
-aside.profile-details{
-    float: left;
+ .who-to-follow{
+     float:right;
+     max-width: 25%;
+     margin: 0em .5em 0em .5em;
+
+ }
+ .media-image{
+     max-width: 50px;
+     margin-top: 1.33em;
+     float: left;
+ }
+
+ aside.profile-details{
+     float: left;
+     position: absolute;
+     left: 10px;
+ }
+
+ main.timeline{
+     float: left;
+     position: absolute;
+     left: 300px;
+     width: 50%;
+ }
+
+.media{
+    width: 100%;
+    background-color:var(--light-bg) ;
+    float:left;
+    padding: .5em;
+    border-bottom: 1px solid var(--separator-color);
+
 }
+
+
+
+
+ /*aside.who-to-follow{*/
+ /*    float:left;*/
+ /*    position: absolute;*/
+ /*    left:1200px;*/
+ /*}*/

@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: #3e91cc;
+}
+.flex-container {
+    width: 100%;
+    border: 3px solid goldenrod;
+    background-color: #ff9c74;
+}
+.flex-item {
+    background: #BFD45D;
+    border: 2px solid #F9EFD6;
+    padding: 1em;
+}
