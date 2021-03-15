@@ -9,7 +9,7 @@ html{
 
 }
 h1 {
-    background-image:url(img/ghost.png);
+    background-image:url(../img/ghost.png);
     background-size: 45%;
     background-repeat: no-repeat;
     z-index: 1;
@@ -23,7 +23,7 @@ h1 {
 
 }
 #logo {
-    background-image: url(img/ghost1.png);
+    background-image: url(../img/ghost1.png);
     background-size: 45%;
     background-repeat: no-repeat;
     z-index: 4;
@@ -129,7 +129,7 @@ footer {
 }
 .cb-slideshow:after {
     content: '';
-    background: transparent url(img/dot.png) repeat top left;
+    background: transparent url(../img/dot.png) repeat top left;
 }
 .cb-slideshow li span {
     width: 100%;
@@ -172,9 +172,9 @@ footer {
     line-height: 200px;
     color: transparent;
 }
-.cb-slideshow li:nth-child(1) span { background-image: url(img/OSFCedit.jpg) }
+.cb-slideshow li:nth-child(1) span { background-image: url(../img/OSFCedit.jpg) }
 .cb-slideshow li:nth-child(2) span {
-    background-image: url(img/TwistedFinal.jpg);
+    background-image: url(../img/TwistedFinal.jpg);
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
@@ -182,7 +182,7 @@ footer {
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(img/Rotateelectro1.jpg);
+    background-image: url(../img/Rotateelectro1.jpg);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -190,7 +190,7 @@ footer {
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(img/GAGAFIN1.jpg);
+    background-image: url(../img/GAGAFIN1.jpg);
     -webkit-animation-delay: 18s;
     -moz-animation-delay: 18s;
     -o-animation-delay: 18s;
@@ -198,7 +198,7 @@ footer {
     animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url(img/drkS22.jpg);
+    background-image: url(../img/drkS22.jpg);
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -206,7 +206,7 @@ footer {
     animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(6) span {
-    background-image: url(img/gen.png);
+    background-image: url(../img/gen.png);
     -webkit-animation-delay: 30s;
     -moz-animation-delay: 30s;
     -o-animation-delay: 30s;
