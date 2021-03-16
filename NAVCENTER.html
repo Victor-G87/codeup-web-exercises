@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox In Practice</title>
+    <style>
+        .flex-container {
+
+            border: 3px solid goldenrod;
+            background-color: rebeccapurple;
+            display: flex; /* default direction = row */
+            justify-content: center;
+            width: 100%;
+        }
+        .flex-item {
+            background: #BFD45D;
+            padding: 1em;
+            margin: .5em;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        #item1 {
+            margin-right: auto;
+
+
+
+        }
+        #item2 {
+
+        }
+        #item3 {
+            display: block;
+            position: absolute;
+            /*z-index: 0;*/
+
+
+        }
+        #item4 {
+
+
+        }
+       body {
+           height: 1000px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div id="item1" class="flex-item">Hamburger</div>
+    <div id="item2" class="flex-item">Logo</div>
+    <div id="item3" class="flex-item">Front Page</div>
+    <div id="item4" class="flex-item">Logout</div>
+</div>
+</body>
+</html>
