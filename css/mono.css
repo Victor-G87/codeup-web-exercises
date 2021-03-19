@@ -127,6 +127,7 @@ footer {
     top: 0px;
     left: 0px;
     z-index: -1;
+
 }
 .cb-slideshow:after {
     content: '';

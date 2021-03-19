@@ -1,0 +1,279 @@
+/**{*/
+/*    box-sizing: border-box;*/
+
+
+/*}*/
+
+
+/*body {*/
+
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    color: black;*/
+/*    margin-left: 6px;*/
+/*    margin-right: 6px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+
+
+
+/*}*/
+
+/*.header-img{*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*    width: auto\9;*/
+
+/*}*/
+/*div[class*="alert"] {*/
+/*    visibility: hidden;*/
+/*}*/
+
+
+/*    .nav-links, ul, li {*/
+/*        display: flex;*/
+/*        list-style: none;*/
+/*        padding: 10px;*/
+/*        padding-left: 20px;*/
+/*        float: right;*/
+
+/*    }*/
+
+
+
+/*.header-img{*/
+/*    width: 100%;*/
+
+
+/*}*/
+/*img{*/
+/*    width: 100%;*/
+
+/*}*/
+
+
+/*body {*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.hidden-on-desktop {*/
+/*    display: none;*/
+/*}*/
+
+/*h1 {*/
+/*    margin: .2em auto .5em 0;*/
+/*    font-size: 2.5em;*/
+/*}*/
+/*.nav-links {*/
+/*    flex-direction: row;*/
+/*}*/
+
+/*.nav-links li {*/
+/*    background: none;*/
+/*    margin: 0 .75em;*/
+/*}*/
+
+/*section p {*/
+/*    padding-right: 1em;*/
+/*}*/
+
+/*.main {*/
+/*    flex-basis: 60%;*/
+/*}*/
+
+/*.sub-section {*/
+/*    flex-basis: 40%;*/
+/*}*/
+
+
+
+
+
+
+
+/*!* Media Queries *!*/
+
+
+/*!* Mobile Devices - Phones/Tablets *!*/
+
+/*@media only screen and (max-width: 768px) {*/
+
+/*    *{*/
+/*        !*margin: auto;*!*/
+/*        !*padding: 5px;*!*/
+/*        !*transition: all 400ms cubic-bezier(1.000, -0.445, 0.000, 1.385); !* custom *!*!*/
+/*        transition:.7s;*/
+
+
+
+/*    }*/
+/*    div[class*="alert"]>a {*/
+/*        visibility: visible;*/
+/*        text-align: center;*/
+/*        background-color: #ff9c74;*/
+/*        border-style: solid;*/
+/*        text-decoration: none;*/
+/*    }*/
+
+/*    a {*/
+/*    text-align: center;*/
+/*        display: block;*/
+/*        line-height: 2em;*/
+
+/*    }*/
+
+/*    h1{*/
+/*        display: block;*/
+/*        text-align: center;*/
+/*        padding-bottom: 10px;*/
+
+/*    }*/
+
+
+
+
+/*    .nav-links,li{*/
+/*        display: block;*/
+/*        border-radius: 3px;*/
+/*        margin: auto;*/
+/*        padding:0;*/
+/*        list-style: none;*/
+/*        text-align: center;*/
+/*        float: none;*/
+/*        height: auto;*/
+/*        padding-bottom: 10px;*/
+
+
+
+/*    }*/
+
+/*    li{*/
+/*        background-color: #9000ff;*/
+/*        margin-bottom: 10px;*/
+/*        line-height: 2em;*/
+
+/*    }*/
+
+
+/*    .header-img{*/
+/*        max-width: 100%;*/
+/*        height: auto;*/
+/*        width: auto\9;*/
+
+
+
+/*    }*/
+
+
+/*    }*/
+
+
+
+/*..............................CLASS EXAMPLE..............................*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin: 1em;
+}
+
+.alert-info a {
+    background: #BEFFFF;
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    border: 2px solid lightgray;
+}
+
+h1 {
+    margin: .2em auto .5em auto;
+    font-size: 3em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    background: lightgray;
+    display: flex;
+    height: 3.5em;
+    width: 100%;
+    margin-bottom: .7em;
+}
+
+.nav-links a {
+    margin: auto;
+}
+
+.header-img {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.sub-section h2 {
+    font-size: 1.25em;
+}
+
+.sub-section {
+    font-style: italic;
+}
+
+footer {
+    margin-top: 4em;
+}
+
+@media screen and (min-width: 768px){
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+    h1 {
+        margin: .2em auto .5em 0;
+        font-size: 2.5em;
+    }
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .nav-links li {
+        background: none;
+        margin: 0 .75em;
+    }
+
+    section p {
+        padding-right: 1em;
+    }
+
+    .main {
+        flex-basis: 60%;
+    }
+
+    .sub-section {
+        flex-basis: 40%;
+    }
+
+
+}
+
