@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor:crosshair ;
+    
+}
+#particles-js{
+    
+   height: 100vh;
+   background-image: linear-gradient(to right top, #7a00ff, #5710d5, #3711ab, #1a0e81, #000859);
+   display: block;
+   z-index: -100;
+   width: 100vw;
+   position: fixed;
+   filter:blur(2.5px);
+   pointer-events: none;
+   
+
+    
+}
+
+#particles-js2{
+    
+    height: 100vh;
+    
+    display: block;
+    z-index: -100;
+    width: 100vw;
+    position: fixed;
+    
+
+    
+    
+    
+ 
+     
+ }
+
+ #particles-js3{
+    
+    height: 100vh;
+    background-image: transparent;
+    display: block;
+    z-index: -100;
+    width: 100vw;
+    position: fixed;
+    filter:blur(20px) brightness(200%);
+    pointer-events: none;
+
+    
+    
+ 
+     
+ }
+
+
+.bg{
+    
+
+    background-image: url(../img/ghost1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    font-size: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    opacity: 0.88;
+    height: 800px;
+    width: 800px;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    
+    
+    
+
+    
+}
+
