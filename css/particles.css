@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     box-sizing: border-box;
     cursor:crosshair ;
@@ -9,60 +9,47 @@
 #particles-js{
     
    height: 100vh;
-   background-image: linear-gradient(to right top, #7a00ff, #5710d5, #3711ab, #1a0e81, #000859);
    display: block;
-   z-index: -100;
+   /*z-index: -100;*/
    width: 100vw;
    position: fixed;
-   filter:blur(2.5px);
+   filter:blur(3px);
    pointer-events: none;
-   
 
-    
 }
 
 #particles-js2{
     
     height: 100vh;
-    
     display: block;
     z-index: -100;
     width: 100vw;
     position: fixed;
-    
+    pointer-events: auto;
 
-    
-    
-    
- 
-     
  }
 
  #particles-js3{
     
     height: 100vh;
-    background-image: transparent;
     display: block;
     z-index: -100;
     width: 100vw;
     position: fixed;
-    filter:blur(20px) brightness(200%);
+    filter:blur(15px) ;
     pointer-events: none;
+     opacity: 0.3;
 
-    
-    
- 
-     
  }
 
-
+/*...............page content.............*/
 .bg{
     
 
     background-image: url(../img/ghost1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%;
+    background-size: 30%;
     display: block;
     position: absolute;
     top: 10%;
@@ -71,15 +58,85 @@
     color: whitesmoke;
     font-size: 1em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    opacity: 0.88;
+    opacity: 1;
     height: 800px;
     width: 800px;
     pointer-events: none;
     mix-blend-mode: screen;
-    
-    
-    
 
-    
 }
+
+body{
+    background-image: linear-gradient(to right top, #5f00ca, #4808bc, #24028d, #150885, #000859);
+    height: 100vh;
+    /*width: 100vw;*/
+    pointer-events: none;
+
+}
+
+h1{
+    width: 40%;
+}
+
+.grain:after {
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: 1000;
+    top: -5%;
+    left: -5%;
+    opacity: .7;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
+    -webkit-animation: grain 0.5s steps(1) infinite;
+    animation: grain 0.5s steps(1) infinite;
+}
+
+
+
+
+
+@keyframes grain {
+    0%, 100% {
+        transform: translate(0, 0, 0);
+    }
+
+    10% {
+        transform: translate(-1%, -1%);
+    }
+
+    20% {
+        transform: translate(1%, 1%);
+    }
+
+    30% {
+        transform: translate(-2%, -2%);
+    }
+
+    40% {
+        transform: translate(3%, 3%);
+    }
+
+    50% {
+        transform: translate(-3%, -3%);
+    }
+
+    60% {
+        transform: translate(4%, 4%);
+    }
+
+    70% {
+        transform: translate(-4%, -4%);
+    }
+
+    80% {
+        transform: translate(2%, 2%);
+    }
+
+    90% {
+        transform: translate(-3%, -3%);
+    }
+}
+
+
 

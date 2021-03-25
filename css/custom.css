@@ -1,0 +1,34 @@
+.jumbotron{
+    background-image: url("../img/pizza.png");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.display-4{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: rgba(233, 233, 233, 0.6);
+    color: rgba(38, 38, 38, 0.7);
+    width: 100%;
+    position: absolute;
+    left:0px;
+    margin: 0;
+    padding:0px ;
+}
+
+.lead{
+    display: none;
+}
+
+.badge-primary{
+    background-color: #aeaeae;
+}
+
+.nav-link.active:hover{
+    color: #3e91cc;
+}
+.my-4{
+    visibility: hidden;
+}
+
+
