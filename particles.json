@@ -20,9 +20,10 @@
         "nb_sides": 6
       },
       "image": {
-        "src": "",
+        "src": "../img/DUCK.png",
         "width": 100,
-        "height": 100
+        "height": 100,
+        "type": "image"
       }
     },
     "opacity": {

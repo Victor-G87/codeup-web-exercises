@@ -15,7 +15,7 @@
 #particles-js{
 
     height: 100vh;
-    background-image: linear-gradient(to right top, #7a00ff, #5710d5, #3711ab, #1a0e81, #000859);
+    background-image: linear-gradient(to right top, #ae7be7, #e4c1fa, #9e7aff, #aaa2ff, #000859);
     display: block;
     z-index: -100;
     width: 100vw;
@@ -69,7 +69,7 @@
 .bg{
 
 
-    background: url(../img/ghost1.png);
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
@@ -308,11 +308,19 @@ img[alt*="art"]{
     opacity: 0.2;
 }
 
-svg{
-    filter:blur(1px);
-    opacity: 0.8;
-}
+.NES{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    height: 500px;
+    width: auto;
+    opacity: 0.9;
+    pointer-events: none;
 
+}
 
 
 
