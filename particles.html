@@ -36,45 +36,46 @@
         $("#DW").hide("#DW");
 
         $("#particles-js").hide("#particles-js");
+        $("#particles-js2").hide("#particles-js2");
 
 
     });
 
-    // var toShow = true;
+
     $(document).keydown(function(keyEvent) {
         if(keyEvent.keyCode == 66){
             $('#BB').toggle("#BB");
             $('#BB').show("#BB");
-            // toShow = !toShow;
+
         }
     });
-    // var toShow = true;
+
     $(document).keydown(function(keyEvent) {
         if(keyEvent.keyCode == 65){
             $('#AB').toggle("#AB");
             $('#AB').show("#AB");
-            // toShow = !toShow;
+
         }
     });
 
-    // var toShow = true;
+
     $(document).keydown(function(keyEvent) {
         if(keyEvent.keyCode == 40){
 
             $('#DW').show("#DW");
             $('#DW').toggle("#DW");
 
-            // toShow = !toShow;
+
         }
     });
-    // var toShow = true;
+
     $(document).keydown(function(keyEvent) {
         if(keyEvent.keyCode == 39){
 
             $('#RT').show("#RT");
             $('#RT').toggle("#RT");
 
-            // toShow = !toShow;
+
         }
     });
     $(document).keydown(function(keyEvent) {
@@ -83,7 +84,7 @@
             $('#LF').show("#LF");
             $('#LF').toggle("#LF");
 
-            // toShow = !toShow;
+
         }
     });
     $(document).keydown(function(keyEvent) {
@@ -92,7 +93,7 @@
             $('#UP').show("#UP");
             $('#UP').toggle("#UP");
 
-            // toShow = !toShow;
+
         }
     });
     var konamiCodeKeys = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"]
@@ -106,6 +107,7 @@
         }
         if(konamiCodeKeys.toString().toLowerCase() === keysPressed.toString().toLowerCase()) {
             $("#particles-js").show("#particles-js");
+            $("#particles-js2").show("#particles-js2");
         }
         console.log(keysPressed);
     });

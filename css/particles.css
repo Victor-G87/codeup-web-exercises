@@ -15,7 +15,7 @@
 #particles-js{
 
     height: 100vh;
-    background-image: linear-gradient(to right top, #ae7be7, #e4c1fa, #9e7aff, #aaa2ff, #000859);
+    background-image: linear-gradient(to right top, #ae7be7, #e4c1fa, #e4c1fa, #aaa2ff);
     display: block;
     z-index: -100;
     width: 100vw;
@@ -35,7 +35,7 @@
     height: 100vh;
 
     display: block;
-    z-index: -100;
+    z-index: 1000;
     width: 100vw;
     position: fixed;
 
@@ -319,6 +319,7 @@ img[alt*="art"]{
     width: auto;
     opacity: 0.9;
     pointer-events: none;
+
 
 }
 
