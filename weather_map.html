@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+
+    <title></title>
+</head>
+<!--<body><div id='show' style='width: 100%; height: 300px;'></div>-->
+
+<h1>Weather Map Project</h1>
+
+
+
+
+<!--<h5>Tips</h5>-->
+<!--<ul>-->
+<!--    <li>Take time to plan out your approach for each part of the project</li>-->
+<!--    <li>Commit along the way. Especially as you are starting new functionality</li>-->
+<!--    <li>You may utilize the geocoder helper methods from the previous mapbox lesson</li>-->
+<!--    <li>API Keys should be protected in your keys.js</li>-->
+<!--    <li>Read the docs!</li>-->
+<!--    <li>Get your project working, then focus on styling & refactoring</li>-->
+<!--    <li>To add mapbox autocomplete search, you will need to include geocoder scripts from mapbox</li>-->
+<!--</ul>-->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+
+<script>
+
+
+
+    // function create_request() {
+    //     var city = $("input").val();
+    //     var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+    //         "&units=imperial&appid=e83b3c4c08285bf87b99f9bbc0abe3f0";
+    //     $.get(API_URL, deliver);
+    // }
+    //
+    // function deliver(response) {
+    //     var result = "<h4>" + response.name + "</h4>" +
+    //         "<ul>" +
+    //         "<li> temperature: " + response.main.temp + " F </li>" +
+    //         "<li> humidity: " + response.main.humidity + "% </li>" +
+    //         "<li> wind speed: " + response.wind.speed + " mph</li>" +
+    //         "<li> High: " + response.main.temp_max + " F</li>" +
+    //         "<li> Low: " + response.main.temp_min + " F</li>" +
+    //         "<li> sky: " + response.clouds.all + " %</li>" +
+    //         "</ul>";
+    //     $(".result").html(result);
+    // }
+
+
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        "use strict";
+
+
+        // GET REQUEST to OpenWeatherMap using city parameter
+        // https://openweathermap.org/current
+
+        // $.get("https://api.openweathermap.org/data/2.5/weather",{
+        //     q: "San Antonio,US",
+        //     appid: OPEN_WEATHER_APPID,
+        //     units:"imperial"
+        // }).done(function(results){
+        //     console.log(results)
+        // });
+
+        // $.get("https://api.openweathermap.org/data/2.5/weather",{
+        //     // q: "San Antonio,US",
+        //     appid: OPEN_WEATHER_APPID,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units:"imperial"
+        // }).done(function(results){
+
+        // });
+
+
+
+
+
+
+        // TODO: How can we get imperial units instead?
+
+        // TODO: What are some additional ways we can get the weather from this API?
+
+        //
+        // $.get("https://api.openweathermap.org/data/2.5/onecall",{
+        //     // q: "San Antonio,US",
+        //     appid: OPEN_WEATHER_APPID,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     exclude: "current,minutely,hourly,alerts",
+        //     units:"imperial"
+        // }).done(function(data){
+        //
+        //     console.log(data)
+        // });
+
+
+        // $(document).ready(function() {
+        //     $("button").on("click", create_request);
+        // });
+
+        // jQuery equivalent to <button onclick="create_request()"> ...
+       // $(document).ready(function() {
+       //      $("button").on("click", create_request);
+       //  });
+
+        // BORING jQuery way :-(
+    // $(document).ready(function() {
+    //         $("button").on("click", function(event) {
+    //             var city = $("input").val();
+    //             var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+    //                 "&units=imperial&appid=e83b3c4c08285bf87b99f9bbc0abe3f0";
+    //             $.get(API_URL, function(response) {
+    //                 var result = "<h4>" + response.name + "</h4>" +
+    //                     "<ul>" +
+    //                     "<li> temperature: " + response.main.temp + " F </li>" +
+    //                     "<li> humidity: " + response.main.humidity + "% </li>" +
+    //                     "<li> wind speed: " + response.wind.speed + "MPH </li>" +
+    //                     "</ul>";
+    //                 $(".result").html(result);
+    //             });
+    //         });
+    //     });
+
+
+        // $(document).ready(function() {
+        //     $("button").on("click", function(event) {
+        //         var appId = OPEN_WEATHER_APPID;
+        //         var city = $("input").val();
+        //
+        //         var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+        //             "&units=imperial&appid=" + appId;
+        //         $.get(API_URL, function(response) {
+        //             var result = "<h4>" + response.name + "</h4>" +
+        //                 "<ul>" +
+        //                 "<li> temperature: " + response.main.temp + " F </li>" +
+        //                 "<li> humidity: " + response.main.humidity + "% </li>" +
+        //                 "<li> wind speed: " + response.wind.speed + " mph</li>" +
+        //                 "<li> High: " + response.main.temp_max + " F</li>" +
+        //                 "<li> Low: " + response.main.temp_min + " F</li>" +
+        //                 "<li> sky: " + response.clouds.all + " %</li>" +
+        //                 "</ul>";
+        //             $(".result").html(result);
+        //         });
+        //     });
+        // });
+
+
+        $(document).ready(function() {
+            $("button").on("click", function(event) {
+                var appId = OPEN_WEATHER_APPID;
+                var city = $("input").val();
+                var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + appId;
+                var queryURLforcast = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + appId;
+
+
+                // var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+                //     "&units=imperial&appid=" + appId;
+                $.get(queryURL, function(response) {
+                    var result = "<h4>" + response.name + "</h4>" +
+                        "<ul>" +
+                        "<li> temperature: " + response.main.temp + " F </li>" +
+                        "<li> humidity: " + response.main.humidity + "% </li>" +
+                        "<li> wind speed: " + response.wind.speed + " mph</li>" +
+                        "<li> High: " + response.main.temp_max + " F</li>" +
+                        "<li> Low: " + response.main.temp_min + " F</li>" +
+                        "<li> sky: " + response.clouds.all + " %</li>" +
+                        "</ul>";
+                    $(".result").html(result);
+                });
+            });
+        });
+
+
+
+
+        // $(document).ready(function() {
+        //     $("button").on("click", function(event) {
+        //         var appId = OPEN_WEATHER_APPID;
+        //         var city = $("input").val();
+        //
+        //         var API_URL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city +
+        //             "&appid=" + appId;
+        //         $.get(API_URL, function(response) {
+        //             var result = "<h4>" + response.name + "</h4>" +
+        //                 "<ul>" +
+        //                 "<li> temperature: " + response.main.temp + " F </li>" +
+        //                 "<li> humidity: " + response.main.humidity + "% </li>" +
+        //                 "<li> wind speed: " + response.wind.speed + " mph</li>" +
+        //                 "<li> High: " + response.main.temp_max + " F</li>" +
+        //                 "<li> Low: " + response.main.temp_min + " F</li>" +
+        //                 "<li> sky: " + response.clouds.all + " %</li>" +
+        //                 "</ul>";
+        //             $(".five-day").html(result);
+        //         });
+        //     });
+        // });
+
+        // api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+
+
+
+
+        // var appId = YOUR_APP_ID;
+        // var url = "http://samples.openweathermap.org/data/2.5/history/city?q=London,UK&appid=" + appId;
+        // $.ajax({
+        //     type: "GET",
+        //     url: url,
+        //     success: function( response) {
+        //         //DO_SOMTHING_WITH_YOUR_JSON
+        //     }
+        // });
+
+
+        //TODO: How can we incorporate mapbox with this? How can we make it dynamic?
+
+        // TODO: Explore the docs... what endpoint can we use to get a forecast?
+
+        // TODO: What parameter can we include in order to get the daily forecast only
+
+    });
+
+
+
+</script>
+
+
+
+
+
+
+<!--<button onclick="create_request()">-->
+
+<!--<h1>Open Weather Map <a href="https://openweathermap.org/current">API</a></h1>-->
+<h3>The Current Weather in</h3>
+<div class="result"></div>
+<input type="text" placeholder="City">
+<button onclick="create_request()">Check Weather</button>
+
+
+
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush five-day">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body five-day">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>
+
+
+</body>
+</html>
