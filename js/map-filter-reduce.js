@@ -4,93 +4,88 @@ const users = [
         name: 'ryan',
         email: 'ryan@codeup.com',
         languages: ['clojure', 'javascript'],
-        yearsExp: 12,
-        age: 27,
+        yearsOfExperience: 5
     },
     {
         id: 2,
-        name: 'mykel',
-        email: 'mykelkovar@gmail.com',
-        languages: ['html', 'russian', 'javascript'],
-        yearsExp: 7,
-        age: 10,
+        name: 'luis',
+        email: 'luis@codeup.com',
+        languages: ['java', 'scala', 'php'],
+        yearsOfExperience: 6
     },
     {
         id: 3,
         name: 'zach',
         email: 'zach@codeup.com',
         languages: ['javascript', 'bash'],
-        yearsExp: 1,
-        age: 11,
+        yearsOfExperience: 7
     },
     {
         id: 4,
         name: 'fernando',
         email: 'fernando@codeup.com',
         languages: ['java', 'php', 'sql'],
-        yearsExp: 22,
-        age: 90,
+        yearsOfExperience: 8
     },
     {
         id: 5,
         name: 'justin',
         email: 'justin@codeup.com',
         languages: ['html', 'css', 'javascript', 'php'],
-        yearsExp: 9,
-        age: 47,
-    },
+        yearsOfExperience: 9
+    }
 ];
 
+//TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
+let filteredUsers = users.filter(function(user){
+    return user.languages.length > 2;
+})
 
+console.log(filteredUsers);
 
+//TODO: Use .map to create an array of strings where each element is a user's email address
 
-let newUsers = users.filter( user => user.languages.length >= 3);
+let emails = users.map(function(user){
+    return user.email;
+})
 
-console.log(newUsers);
+console.log(emails);
 
+//TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 
+let totalYears = users.reduce(function(totalYears, user){
+    return totalYears + user.yearsOfExperience;
+}, 0)
 
-let userEmail = users.map( user => user.email);
+let averageYears = totalYears / users.length;
 
+console.log(averageYears);
+console.log(totalYears);
 
-console.log(userEmail);
+//TODO: Use .reduce to get the longest email from the list of users.
 
+let longestEmail = users.reduce(function(longestEmail, user){
 
+    if(user.email.length > longestEmail.length){
+        longestEmail = user.email
+    }
+    return longestEmail;
 
-let newObject = users.reduce( (accumulation, currentObject) => {
-    // console.log(currentObject);
-    accumulation['object' + currentObject.id] = currentObject;
-    return accumulation;
+}, "")
 
-}, {});
+console.log(longestEmail);
 
+// //TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-console.log(newObject);
+let usernameString = users.reduce(function(accumulator, user){
+    return `${accumulator} ${user.name},`;
+}, 'instructors are: ').slice(0, -1) + ".";
 
+console.log(usernameString);
 
-
-let totalYrsExp = users.reduce( (total, user) => {
-    total += user.yearsExp;
-    return total;
-}, 0);
-
-console.log(totalYrsExp);
-
-
-
-let longEmail = users.reduce((longest, currentEmail) => {
-    return currentEmail.email.length > longest.length ? currentEmail.email : longest;
-},"");
-
-console.log(longEmail);
-
-
-
-let singleString = users.reduce((x, y) => {
-    return `${x},${y.name}`;
-}, `Your instructors are: `);
-console.log(singleString);
+let mapJoinSolution = `instructors are: ${users.map(user=>user.name).join(', ')}.`;
+console.log(mapJoinSolution);
 
 
 
