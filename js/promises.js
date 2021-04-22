@@ -13,19 +13,19 @@
 
 //TODO: add a method that runs if the Promise resolves successfully
 
-// pokemonAPI.then((response)=> {
-//     response
-//         .json()
-//         .then((jsonResponseData)=> {
-//             console.log(jsonResponseData)
-//             //fetch
-//                 //then
-//                     //then
-//         });
-// });
+pokemonAPI.then((response)=> {
+    response
+        .json()
+        .then((jsonResponseData)=> {
+            console.log(jsonResponseData)
+            //fetch
+                //then
+                    //then
+        });
+});
 
-//TODO: add a method that runs if the Promise fails
-//pokemonAPI.catch(reason => console.log(reason));
+TODO: add a method that runs if the Promise fails
+pokemonAPI.catch(reason => console.log(reason));
 
 //TODO: In the callback function of the .then method, parse the response into JSON
 
@@ -107,18 +107,41 @@ getUserLastCommit('Victor-G87')
     .then( lastCommitDate => document.body.innerHTML = `${lastCommitDate} lastCommitDate`);
 
 
-const wait = miliseconds => {
-    return new Promise( (resolved, reject) => {
-        setTimeout( () => {
-            resolved(miliseconds);
-        }, miliseconds);
-    });
-};
+// const wait = miliseconds => {
+//     return new Promise( (resolved, reject) => {
+//         setTimeout( () => {
+//             resolved(miliseconds);
+//         }, miliseconds);
+//     });
+// };
+//
+// wait(4000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
+//
+// wait(5000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
+//
+// wait(10000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
 
-wait(4000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
 
-wait(5000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
-
-wait(10000).then( (ms) => console.log(`You'll see this after ${ms/1000} seconds`));
-
+// console.log("Promises exercise");
+//
+// function getLastPushDate(githubUsername) {
+//     let url = `https://api.github.com/users/${githubUsername}/events`;
+//     let githubResponse = fetch(url, {headers: {'Authorization': `token ${GITHUB_PAT}`}});
+//     return githubResponse
+//         .then((response)=>{
+//             return response.json();
+//         })
+//         .then((githubEventData)=>{
+//             for (let githubEvent of githubEventData) {
+//                 if(githubEvent.type === "PushEvent") {
+//                     console.log(githubEvent.created_at);
+//                     return new Date(githubEvent.created_at);
+//                 }
+//             }
+//         });
+// }
+//
+// getLastPushDate("douglas-codeup")
+//     .then((date)=>console.log(date));
+// //
 
